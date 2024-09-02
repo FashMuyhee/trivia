@@ -1,9 +1,12 @@
+import { Text } from "@/components";
+import { theme } from "@/config";
+import { ThemeProvider } from "@shopify/restyle";
 import { useFonts } from "expo-font";
 import { Slot, Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import React from "react";
 import { useEffect } from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import "react-native-reanimated";
 
 SplashScreen.preventAutoHideAsync();
@@ -27,8 +30,12 @@ export default function RootLayout() {
   }
 
   return (
-    <View style={{ backgroundColor: "red", flex: 1, justifyContent: "center" }}>
-      <Text style={{ fontSize: 20, fontFamily: "medium" }}>Usage</Text>
-    </View>
+    <ThemeProvider theme={theme}>
+      <View
+        style={{ backgroundColor: "white", flex: 1, justifyContent: "center" }}
+      >
+        <Text color="glowGreen">Usage</Text>
+      </View>
+    </ThemeProvider>
   );
 }
