@@ -17,7 +17,8 @@ const palette = {
 export const theme = createTheme({
   colors: palette,
   spacing: {
-    s: 8,
+    xs: 8,
+    s: 12,
     m: 16,
     l: 24,
     xl: 40,
@@ -35,11 +36,11 @@ export const theme = createTheme({
     header: {
       fontWeight: "bold",
       fontFamily: "bold",
-      fontSize: 34,
+      fontSize: 32,
     },
-    body: {
-      fontSize: 16,
-      fontFamily: "regular",
+    medium: {
+      fontSize: 24,
+      fontFamily: "medium",
     },
     defaults: {
       fontSize: 14,
