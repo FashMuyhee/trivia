@@ -41,7 +41,7 @@ export const TopGamers = () => {
   const w = width - spacing.l * 2;
 
   return (
-    <Flex width={w} mb="m" alignSelf="center" borderRadius={spacing.m} justifyContent="center" style={{marginTop: 180}}>
+    <Flex width={w} alignSelf="center" borderRadius={spacing.m} justifyContent="center" style={{marginTop: 150}}>
       <Text fontFamily="bold" fontSize={16}>
         Top Gamers of the Day
       </Text>

@@ -11,8 +11,8 @@ const RingTop = () => (
     right={-50}
     top={-39}
     borderRadius={150 / 2}
-    height={150}
-    width={150}
+    height={130}
+    width={130}
     borderWidth={8}
     style={{borderColor: '#BCDDF4'}}
   />
@@ -21,11 +21,11 @@ const RingTop = () => (
 const RingBottom = () => (
   <Flex
     position="absolute"
-    left={-35}
-    bottom={0}
+    left={-25}
+    bottom={5}
     borderRadius={150 / 2}
-    height={150}
-    width={150}
+    height={130}
+    width={130}
     borderWidth={8}
     style={{borderColor: '#BCDDF4'}}
   />
@@ -49,7 +49,7 @@ export const GameCard = () => {
         shadowOpacity: 1,
       }}
       elevation={1}
-      height={246}
+      height={230}
       width={w}
       alignSelf="center"
       position="absolute"

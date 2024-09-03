@@ -1,10 +1,10 @@
-import {View, Dimensions, ImageBackground, Image, Platform} from 'react-native';
+import {View, Dimensions, ImageBackground, Platform} from 'react-native';
 import React from 'react';
 import {StatusBar} from 'expo-status-bar';
 import {useTheme} from '@shopify/restyle';
 import {Theme} from '@/config';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {BellIcon, CirclePlusIcon, EraserIcon, Flex, Text, WavingIcon} from '@/components';
+import {Flex, Text, WavingIcon} from '@/components';
 
 type Props = {};
 
@@ -13,10 +13,11 @@ export const Header = (props: Props) => {
   const {colors} = useTheme<Theme>();
   const {top} = useSafeAreaInsets();
 
+  const mt = top + 60 + (Platform.select({ios: 0, android: 10}) ?? 0);
   return (
     <View
       style={{
-        height: height * 0.35,
+        height: 310,
         width: '100%',
       }}>
       <StatusBar translucent backgroundColor="transparent" style="light" />
@@ -25,58 +26,14 @@ export const Header = (props: Props) => {
           height: '100%',
           width: '100%',
         }}
-        resizeMode="cover"
+        resizeMode="contain"
         imageStyle={{
           borderBottomRightRadius: 60,
           backgroundColor: colors.blueSecondary,
         }}
         source={require('@/assets/images/home-header.png')}>
-        {/* NAVBAR */}
-        <Flex paddingHorizontal="l">
-          <Flex
-            style={{marginTop: top + (Platform.select({ios: 0, android: 10}) ?? 0)}}
-            height={50}
-            flexDirection="row"
-            alignItems="center"
-            justifyContent="space-between">
-            <Flex alignItems="center" justifyContent="center" height={40} width={40} bg="white" borderRadius={20}>
-              <Image style={{height: 26, width: 26}} source={require('@/assets/images/users/1.png')} />
-            </Flex>
-            <Flex alignItems="center" justifyContent="flex-end" flexDirection="row" columnGap="s" height={40} width="50%">
-              <Flex
-                borderWidth={1.2}
-                borderColor="white"
-                borderRadius={24}
-                alignItems="center"
-                justifyContent="center"
-                flexDirection="row"
-                height={28}
-                width={47}
-                style={{columnGap: 5}}>
-                <EraserIcon />
-                <Text fontFamily="bold" color="white">
-                  0
-                </Text>
-              </Flex>
-              <Flex
-                bg="white"
-                borderRadius={24}
-                alignItems="center"
-                justifyContent="center"
-                flexDirection="row"
-                height={28}
-                style={{paddingHorizontal: 7, columnGap: 5}}>
-                <Text variant="small" fontFamily="bold" color="bluePrimary">
-                  ₦5,000.00
-                </Text>
-                <CirclePlusIcon />
-              </Flex>
-              <BellIcon />
-            </Flex>
-          </Flex>
-        </Flex>
-        {/* USER */}
-        <Flex paddingHorizontal="l" mt="s">
+        {/* USER info*/}
+        <Flex paddingHorizontal="l" style={{marginTop: mt}}>
           <Flex alignItems="center" flexDirection="row" columnGap="xs">
             <Text fontSize={24} fontFamily="dmsans" color="white">
               Hello John
