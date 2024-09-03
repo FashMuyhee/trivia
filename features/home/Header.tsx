@@ -13,7 +13,7 @@ export const Header = (props: Props) => {
   const {colors} = useTheme<Theme>();
   const {top} = useSafeAreaInsets();
 
-  const mt = top + 60 + (Platform.select({ios: 0, android: 10}) ?? 0);
+  const mt = top + 60 + (Platform.select({ios: 0, android: 30}) ?? 0);
   return (
     <View
       style={{

@@ -1,11 +1,8 @@
-import { View, Text } from "react-native";
-import React from "react";
-import { Stack } from "expo-router";
+import React from 'react';
+import {Stack} from 'expo-router';
 
-type Props = {};
-
-const Layout = (props: Props) => {
-  return <Stack />;
+const Layout = () => {
+  return <Stack screenOptions={{headerShown: false, statusBarTranslucent: true, statusBarColor: '#2c5897', statusBarStyle: 'light'}} />;
 };
 
 export default Layout;
