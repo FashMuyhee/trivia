@@ -15,9 +15,8 @@ export default function RootLayout() {
     bold: require('../assets/fonts/SpaceGrotesk-Bold.ttf'),
     light: require('../assets/fonts/SpaceGrotesk-Light.ttf'),
     medium: require('../assets/fonts/SpaceGrotesk-Medium.ttf'),
-    dmsans: require('../assets/fonts/DMSans-ExtraBold.ttf'),
+    dmsans: require('../assets/fonts/DMSans-Bold.ttf'),
   });
-
 
   useEffect(() => {
     if (loaded) {
