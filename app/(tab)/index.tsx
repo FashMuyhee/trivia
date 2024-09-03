@@ -1,16 +1,17 @@
-import {View, Text} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import React from 'react';
-import {Link} from 'expo-router';
-import {GameCard, Header} from '@/features/home';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import {GameCard, Header, ReferCard} from '@/features/home';
 
 type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <View>
-      <Header />
-      <GameCard />
+    <View style={{flex: 1}}>
+      <ScrollView bounces={false}>
+        <Header />
+        {/* <GameCard /> */}
+        <ReferCard />
+      </ScrollView>
     </View>
   );
 };
