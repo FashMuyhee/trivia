@@ -1,1 +1,2 @@
-export * from "./Text";
+export * from './commons';
+export * from './icons';
