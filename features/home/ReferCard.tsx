@@ -2,11 +2,11 @@ import React from 'react';
 import {Flex, ShareIcon, Text} from '@/components';
 import {useTheme} from '@shopify/restyle';
 import {Theme} from '@/config';
-import {Dimensions, Image, Pressable} from 'react-native';
+import {Dimensions, Pressable} from 'react-native';
 
 export const ReferCard = () => {
   const {spacing} = useTheme<Theme>();
-  const {height, width} = Dimensions.get('screen');
+  const {width} = Dimensions.get('screen');
 
   const w = width - spacing.l * 2;
   return (
@@ -18,6 +18,7 @@ export const ReferCard = () => {
       borderRadius={spacing.m}
       justifyContent="center"
       mt="l"
+      mb="l"
       pl="m"
       overflow="hidden">
       <Flex width="75%" justifyContent="center">
@@ -26,7 +27,7 @@ export const ReferCard = () => {
             Refer & Earn with your Friends
           </Text>
 
-          <Text fontSize={10} fontFamily="light" color="white">
+          <Text fontSize={12} fontFamily="light" color="white">
             Share with your friends and loved ones to come and play
           </Text>
         </Flex>
