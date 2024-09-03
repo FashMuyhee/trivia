@@ -6,6 +6,8 @@ import {TouchableNativeFeedback} from 'react-native';
 type Props = {
   correctAnswer: string;
   incorrectAnswers: string[];
+  onSelectChoice: (s: string) => void;
+  choice: string;
 };
 
 type OptionProps = {
@@ -52,7 +54,7 @@ const Option = ({index, option, ans, onSelect, userChoice}: OptionProps) => {
   }, [thisOption, isCorrect]);
 
   return (
-    <TouchableNativeFeedback onPress={onSelectOption}>
+    <TouchableNativeFeedback disabled={!!userChoice} onPress={onSelectOption}>
       <Flex
         style={{paddingHorizontal: '10%'}}
         bg={bgColor}
@@ -76,9 +78,8 @@ const Option = ({index, option, ans, onSelect, userChoice}: OptionProps) => {
     </TouchableNativeFeedback>
   );
 };
-export const Options = ({correctAnswer, incorrectAnswers}: Props) => {
+export const Options = ({correctAnswer, incorrectAnswers, onSelectChoice, choice}: Props) => {
   const options = [...incorrectAnswers, correctAnswer];
-  const [choice, setChoice] = React.useState('');
   return (
     <Flex mt="l" width="100%">
       <Text fontSize={18} color="white" fontFamily="medium">
@@ -86,7 +87,14 @@ export const Options = ({correctAnswer, incorrectAnswers}: Props) => {
       </Text>
       {options.map((option, index) => {
         return (
-          <Option onSelect={setChoice} ans={correctAnswer} userChoice={choice} key={`option_#${index}`} index={index + 1} option={option} />
+          <Option
+            onSelect={onSelectChoice}
+            ans={correctAnswer}
+            userChoice={choice}
+            key={`option_#${index}`}
+            index={index + 1}
+            option={option}
+          />
         );
       })}
     </Flex>

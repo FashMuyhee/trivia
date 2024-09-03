@@ -3,7 +3,7 @@ import React from 'react';
 import {cleanString} from '../utils';
 
 type Props = {
-  no: string;
+  no: number;
   question: string;
 };
 

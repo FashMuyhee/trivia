@@ -22,7 +22,7 @@ export const percentageHelper = (amount: number, max: number) => {
   return percent / 100;
 };
 
-const TimeProgress = ({currentTime, endTime = 250}: TimeProgressProps) => {
+const TimeProgress = ({currentTime, endTime}: TimeProgressProps) => {
   const strokeWidth = 4;
   const size = 43;
   const center = size / 2;
@@ -59,7 +59,7 @@ const TimeProgress = ({currentTime, endTime = 250}: TimeProgressProps) => {
             cy={center}
             r={radius}
             strokeWidth={strokeWidth}
-            stroke={colors.white}
+            stroke={colors.glowGreen}
             strokeLinecap="round"
             strokeDashoffset={20}
             fill="transparent"
@@ -70,7 +70,7 @@ const TimeProgress = ({currentTime, endTime = 250}: TimeProgressProps) => {
             cy={center}
             r={radius}
             strokeWidth={strokeWidth}
-            stroke={colors.glowGreen}
+            stroke={colors.white}
             strokeLinecap="round"
             strokeDasharray={circumference}
             strokeDashoffset={0}
@@ -86,7 +86,7 @@ const TimeProgress = ({currentTime, endTime = 250}: TimeProgressProps) => {
           position: 'absolute',
           bottom: size * 0.35,
         }}>
-        {endTime - currentTime}
+        {currentTime}
       </Text>
     </Flex>
   );
