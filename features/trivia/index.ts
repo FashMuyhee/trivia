@@ -1,3 +1,2 @@
-export * from './BgScreen';
-export * from './TopHeader';
-export * from './Question';
+export * from './components';
+export * from './utils';

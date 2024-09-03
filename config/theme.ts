@@ -14,6 +14,10 @@ const palette = {
 
   black: '#000000',
   white: '#F0F2F3',
+
+  errorPrimary: '#C30012',
+  errorSecondary: '#F69798',
+  errorAccent: '#FFCBD2',
 };
 
 export const theme = createTheme({

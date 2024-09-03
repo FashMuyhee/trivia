@@ -1,5 +1,6 @@
 import {Flex, Text} from '@/components';
 import React from 'react';
+import {cleanString} from '../utils';
 
 type Props = {
   no: string;
@@ -24,7 +25,7 @@ export const Question = ({no, question}: Props) => {
         Question {no}
       </Text>
       <Text textAlign="center" fontSize={16} fontFamily="medium">
-        {question}
+        {cleanString(question)}
       </Text>
     </Flex>
   );
