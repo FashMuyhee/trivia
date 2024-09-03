@@ -16,7 +16,7 @@ export const Header = (props: Props) => {
   return (
     <View
       style={{
-        height: height * 0.4,
+        height: height * 0.35,
         width: '100%',
       }}>
       <StatusBar translucent backgroundColor="transparent" style="light" />
@@ -32,7 +32,7 @@ export const Header = (props: Props) => {
         }}
         source={require('@/assets/images/home-header.png')}>
         {/* NAVBAR */}
-        <Flex paddingHorizontal="m">
+        <Flex paddingHorizontal="l">
           <Flex
             style={{marginTop: top + (Platform.select({ios: 0, android: 10}) ?? 0)}}
             height={50}
@@ -76,7 +76,7 @@ export const Header = (props: Props) => {
           </Flex>
         </Flex>
         {/* USER */}
-        <Flex paddingHorizontal="m" mt="s">
+        <Flex paddingHorizontal="l" mt="s">
           <Flex alignItems="center" flexDirection="row" columnGap="xs">
             <Text fontSize={24} fontFamily="dmsans" color="white">
               Hello John

@@ -1,18 +1,19 @@
-import { createTheme } from "@shopify/restyle";
+import {createTheme} from '@shopify/restyle';
 
 const palette = {
-  bluePrimary: "#2364AA",
-  blueAccent: "#3386CE",
-  blueSecondary: "#4171ac",
+  bluePrimary: '#2364AA',
+  blueAccent: '#3386CE',
+  blueSecondary: '#4171ac',
+  blueDark: '#17478B',
 
-  cyan: "#00CBF7",
+  cyan: '#00CBF7',
 
-  lemon: "#00EA62",
-  darkGreen: "#009028",
-  glowGreen: "#10DC78",
+  lemon: '#00EA62',
+  darkGreen: '#009028',
+  glowGreen: '#10DC78',
 
-  black: "#000000",
-  white: "#F0F2F3",
+  black: '#000000',
+  white: '#F0F2F3',
 };
 
 export const theme = createTheme({
@@ -34,22 +35,25 @@ export const theme = createTheme({
     largeTablet: 1024,
   },
   textVariants: {
-    header: {
-      fontWeight: "bold",
-      fontFamily: "bold",
+    heading: {
+      fontFamily: 'bold',
+      fontSize: 48,
+    },
+    subHeading: {
+      fontFamily: 'bold',
       fontSize: 32,
     },
     medium: {
       fontSize: 24,
-      fontFamily: "medium",
+      fontFamily: 'medium',
     },
     small: {
       fontSize: 12,
-      fontFamily: "regular",
+      fontFamily: 'regular',
     },
     defaults: {
       fontSize: 14,
-      fontFamily: "regular",
+      fontFamily: 'regular',
     },
   },
 });
