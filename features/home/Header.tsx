@@ -1,4 +1,4 @@
-import {View, Dimensions, ImageBackground, Image} from 'react-native';
+import {View, Dimensions, ImageBackground, Image, Platform} from 'react-native';
 import React from 'react';
 import {StatusBar} from 'expo-status-bar';
 import {useTheme} from '@shopify/restyle';
@@ -33,7 +33,12 @@ export const Header = (props: Props) => {
         source={require('@/assets/images/home-header.png')}>
         {/* NAVBAR */}
         <Flex paddingHorizontal="m">
-          <Flex style={{marginTop: top}} height={50} flexDirection="row" alignItems="center" justifyContent="space-between">
+          <Flex
+            style={{marginTop: top + (Platform.select({ios: 0, android: 10}) ?? 0)}}
+            height={50}
+            flexDirection="row"
+            alignItems="center"
+            justifyContent="space-between">
             <Flex alignItems="center" justifyContent="center" height={40} width={40} bg="white" borderRadius={20}>
               <Image style={{height: 26, width: 26}} source={require('@/assets/images/users/1.png')} />
             </Flex>
@@ -45,8 +50,9 @@ export const Header = (props: Props) => {
                 alignItems="center"
                 justifyContent="center"
                 flexDirection="row"
-                height={30}
-                style={{paddingHorizontal: 5, columnGap: 5}}>
+                height={28}
+                width={47}
+                style={{columnGap: 5}}>
                 <EraserIcon />
                 <Text fontFamily="bold" color="white">
                   0
@@ -58,7 +64,7 @@ export const Header = (props: Props) => {
                 alignItems="center"
                 justifyContent="center"
                 flexDirection="row"
-                height={30}
+                height={28}
                 style={{paddingHorizontal: 7, columnGap: 5}}>
                 <Text variant="small" fontFamily="bold" color="bluePrimary">
                   ₦5,000.00
