@@ -13,9 +13,9 @@ export const BgScreen = ({children}: Props) => {
     <View style={{flex: 1}}>
       <ImageBackground
         source={require('@/assets/images/home-header.png')}
-        style={{height: '100%', width: '100%', backgroundColor: '#2c5897', paddingHorizontal: spacing.m}}
+        style={{height: '100%', width: '100%', backgroundColor: '#2c5897'}}
         resizeMode="repeat">
-        {children}
+        <View style={{paddingHorizontal: spacing.m, flex: 1}}>{children}</View>
       </ImageBackground>
     </View>
   );
