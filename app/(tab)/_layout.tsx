@@ -6,7 +6,7 @@ type Props = {};
 const Layout = (props: Props) => {
   return (
     <Tabs>
-      <Tabs.Screen name="index" />
+      <Tabs.Screen name="index" options={{ headerShown: false }} />
       <Tabs.Screen name="wallet" />
       <Tabs.Screen name="store" />
       <Tabs.Screen name="leaderboard" />

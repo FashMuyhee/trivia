@@ -1,15 +1,15 @@
-import { View, Text } from "react-native";
-import React from "react";
-import { Link } from "expo-router";
+import {View, Text} from 'react-native';
+import React from 'react';
+import {Link} from 'expo-router';
+import {Header} from '@/features/home';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 type Props = {};
 
 const Home = (props: Props) => {
   return (
     <View>
-      <Link href="/trivia">
-        <Text>Home</Text>
-      </Link>
+      <Header />
     </View>
   );
 };

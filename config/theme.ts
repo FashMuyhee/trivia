@@ -3,6 +3,7 @@ import { createTheme } from "@shopify/restyle";
 const palette = {
   bluePrimary: "#2364AA",
   blueAccent: "#3386CE",
+  blueSecondary: "#4171ac",
 
   cyan: "#00CBF7",
 
@@ -41,6 +42,10 @@ export const theme = createTheme({
     medium: {
       fontSize: 24,
       fontFamily: "medium",
+    },
+    small: {
+      fontSize: 12,
+      fontFamily: "regular",
     },
     defaults: {
       fontSize: 14,
