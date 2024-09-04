@@ -1,14 +1,13 @@
-import {Platform, Image, Dimensions} from 'react-native';
+import {Platform, Image} from 'react-native';
 import React from 'react';
 import {Flex, EraserIcon, CirclePlusIcon, BellIcon, Text} from '@/components';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 export const TopNavbar = () => {
   const {top} = useSafeAreaInsets();
-  const {width} = Dimensions.get('screen');
 
   return (
-    <Flex width={width} paddingHorizontal="l">
+    <Flex paddingHorizontal="l">
       <Flex
         style={{marginTop: top + (Platform.select({ios: 0, android: 10}) ?? 0)}}
         height={50}
