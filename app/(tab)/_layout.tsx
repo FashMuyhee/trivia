@@ -2,10 +2,9 @@ import React from 'react';
 import {Tabs} from 'expo-router';
 import {TopNavbar} from '@/features';
 import {HomeIcon, SettingsIcon, StoreIcon, TrophyIcon, WalletIcon} from '@/components';
-import {CurveTabBar} from '@/features/trivia';
+import {CurveTabBar} from '@/components';
 
 const Layout = () => {
-
   return (
     <Tabs tabBar={props => <CurveTabBar {...props} />}>
       <Tabs.Screen
