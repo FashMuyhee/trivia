@@ -1,5 +1,5 @@
 import React, {useReducer} from 'react';
-import {LayoutChangeEvent, StyleSheet, View} from 'react-native';
+import {LayoutChangeEvent, Platform, StyleSheet, View} from 'react-native';
 import Animated, {useDerivedValue, useAnimatedStyle, withTiming} from 'react-native-reanimated';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Svg, {Path} from 'react-native-svg';
@@ -36,7 +36,7 @@ export const CurveTabBar = ({state: {index: activeIndex, routes}, navigation, de
   });
 
   return (
-    <View style={{paddingBottom: bottom, backgroundColor: colors.blueDark}}>
+    <View style={{paddingBottom: bottom + Platform.select({ios: 0, android: 10}), backgroundColor: colors.blueDark}}>
       <AnimatedSvg width={90} height={35} viewBox="0 0 90 35" style={[styles.activeBackground, animatedStyles]}>
         <Path
           fillRule="evenodd"
