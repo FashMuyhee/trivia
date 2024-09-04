@@ -54,9 +54,8 @@ export const TabBarItem = ({active, options, onLayout, onPress}: TabBarComponent
       <Text
         fontSize={12}
         fontFamily="dmsans"
-        color={active ? 'cyan' : 'white'}
         textAlign={'center'}
-        style={{position: 'absolute', bottom: 0}}>
+        style={{position: 'absolute', bottom: 0, color: active ? 'cyan' : '#E4F1FA'}}>
         {options.tabBarLabel?.toString()}
       </Text>
     </Pressable>

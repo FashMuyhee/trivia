@@ -16,7 +16,7 @@ export const TopNavbar = () => {
         alignItems="center"
         justifyContent="space-between">
         <Flex alignItems="center" justifyContent="center" height={40} width={40} bg="white" borderRadius={20}>
-          <Image style={{height: 26, width: 26}} source={require('@/assets/images/users/1.png')} />
+          <Image style={{height: 23, width: 22}} source={require('@/assets/images/users/1.png')} />
         </Flex>
         <Flex alignItems="center" justifyContent="flex-end" flexDirection="row" columnGap="s" height={40} width="50%">
           <Flex
@@ -35,13 +35,12 @@ export const TopNavbar = () => {
             </Text>
           </Flex>
           <Flex
-            bg="white"
             borderRadius={24}
             alignItems="center"
             justifyContent="center"
             flexDirection="row"
             height={28}
-            style={{paddingHorizontal: 7, columnGap: 5}}>
+            style={{paddingHorizontal: 7, columnGap: 5, backgroundColor: '#E4F1FA'}}>
             <Text variant="small" fontFamily="bold" color="bluePrimary">
               ₦5,000.00
             </Text>

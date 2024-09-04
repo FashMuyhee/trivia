@@ -75,7 +75,7 @@ export const GameCard = () => {
           </Text>
         </Flex>
         <Flex alignItems="center" justifyContent="center">
-          <Text fontSize={16} fontFamily="medium" color="blueDark">
+          <Text fontSize={16} fontFamily="dmsans" color="blueDark">
             Game Prize
           </Text>
           <Text fontFamily="dmsans" fontSize={40} textAlign="center" color="blueDark">
