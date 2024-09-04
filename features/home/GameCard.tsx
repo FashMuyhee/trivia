@@ -1,4 +1,4 @@
-import {View, Dimensions, TouchableWithoutFeedback, Pressable} from 'react-native';
+import {Dimensions, Pressable} from 'react-native';
 import React from 'react';
 import {Flex, Text} from '@/components';
 import {useTheme} from '@shopify/restyle';
@@ -96,7 +96,7 @@ export const GameCard = () => {
         borderBottomRightRadius={20}
         borderBottomLeftRadius={20}>
         <Pressable
-          onPress={() => navigate('/(trivia)/result')}
+          onPress={() => navigate('/(trivia)/trivia')}
           style={{
             backgroundColor: 'white',
             width: 95,

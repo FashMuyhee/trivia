@@ -8,7 +8,7 @@ export const TopNavbar = () => {
   const {width} = Dimensions.get('screen');
 
   return (
-    <Flex position="absolute" zIndex={1} top={0} width={width} paddingHorizontal="l">
+    <Flex width={width} paddingHorizontal="l">
       <Flex
         style={{marginTop: top + (Platform.select({ios: 0, android: 10}) ?? 0)}}
         height={50}

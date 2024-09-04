@@ -31,7 +31,7 @@ export default function RootLayout() {
   return (
     <ThemeProvider theme={theme}>
       <Stack initialRouteName="(tab)" screenOptions={{headerShown: false}}>
-        <Stack.Screen name="(tab)" />
+        <Stack.Screen name="(tab)" options={{statusBarColor: 'transparent', statusBarTranslucent: true}} />
         <Stack.Screen name="(trivia)" />
       </Stack>
     </ThemeProvider>

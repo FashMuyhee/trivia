@@ -1,11 +1,10 @@
 import {ScrollView, View} from 'react-native';
 import React from 'react';
-import {GameCard, Header, ReferCard, TopGamers, TopNavbar} from '@/features/home';
+import {GameCard, Header, ReferCard, TopGamers} from '@/features/home';
 
 const Home = () => {
   return (
     <View style={{flex: 1}}>
-      <TopNavbar />
       <ScrollView showsVerticalScrollIndicator={false} bounces={false} style={{backgroundColor: '#f9f9f9'}}>
         <Header />
         <GameCard />

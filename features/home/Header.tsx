@@ -1,15 +1,14 @@
-import {View, Dimensions, ImageBackground, Platform} from 'react-native';
+import {View, ImageBackground, Platform} from 'react-native';
 import React from 'react';
-import {StatusBar} from 'expo-status-bar';
 import {useTheme} from '@shopify/restyle';
 import {Theme} from '@/config';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Flex, Text, WavingIcon} from '@/components';
+import {StatusBar} from 'expo-status-bar';
 
 type Props = {};
 
 export const Header = (props: Props) => {
-  const {height} = Dimensions.get('screen');
   const {colors} = useTheme<Theme>();
   const {top} = useSafeAreaInsets();
 
@@ -20,7 +19,6 @@ export const Header = (props: Props) => {
         height: 310,
         width: '100%',
       }}>
-      <StatusBar translucent backgroundColor="transparent" style="light" />
       <ImageBackground
         style={{
           height: '100%',
