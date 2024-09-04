@@ -17,7 +17,7 @@ const palette = {
 
   errorPrimary: '#C30012',
   errorSecondary: '#F69798',
-  errorAccent: '#FFCBD2',
+  errorAccent: '#F9474B',
 };
 
 export const theme = createTheme({
