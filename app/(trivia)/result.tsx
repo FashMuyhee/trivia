@@ -1,7 +1,6 @@
 import React from 'react';
 import {BgScreen, GradientButton, Message, Scoreboard, useTriviaContext} from '@/features/trivia';
 import {Text} from '@/components';
-import {StatusBar} from 'expo-status-bar';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Platform} from 'react-native';
 
@@ -12,7 +11,6 @@ const Result = (props: Props) => {
   const {top} = useSafeAreaInsets();
   return (
     <BgScreen>
-      <StatusBar />
       <Text
         fontSize={24}
         fontFamily="dmsans"
