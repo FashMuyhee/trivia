@@ -7,12 +7,14 @@ const palette = {
   blueDark: '#17478B',
 
   cyan: '#00CBF7',
+  cyanLight: '#DFF9FF',
 
   lemon: '#00EA62',
   darkGreen: '#009028',
   glowGreen: '#10DC78',
 
   black: '#000000',
+  black2: '#3B3B3B',
   white: '#F0F2F3',
 
   errorPrimary: '#C30012',

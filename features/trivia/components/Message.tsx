@@ -11,7 +11,7 @@ type Props = {
 export const Message = ({isWellDone}: Props) => {
   return (
     <Flex
-      bg="white"
+      bg="cyanLight"
       borderRadius={10}
       alignItems="center"
       height={256}

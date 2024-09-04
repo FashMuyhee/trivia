@@ -96,7 +96,7 @@ export const GameCard = () => {
         borderBottomRightRadius={20}
         borderBottomLeftRadius={20}>
         <Pressable
-          onPress={() => navigate('/trivia')}
+          onPress={() => navigate('/(trivia)/result')}
           style={{
             backgroundColor: 'white',
             width: 95,

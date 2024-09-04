@@ -12,7 +12,7 @@ export const Scoreboard = ({score, total}: Props) => {
   const {colors} = useTheme<Theme>();
   return (
     <Flex
-      bg="white"
+      bg="cyanLight"
       borderRadius={10}
       justifyContent="center"
       alignItems="center"
