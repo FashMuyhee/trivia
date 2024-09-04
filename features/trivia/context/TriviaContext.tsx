@@ -41,7 +41,7 @@ export const TriviaContext = createContext<TriviaContextValue>({
 });
 
 export const TriviaProvider = ({children}: {children: React.ReactNode}) => {
-  const {navigate} = useRouter();
+  const {replace} = useRouter();
 
   const [triviaData, setTriviaData] = useState<TriviaData[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -87,7 +87,7 @@ export const TriviaProvider = ({children}: {children: React.ReactNode}) => {
     if (currentQuestionIndex === totalQuestion && timeLeft === 0) {
       setTimeout(() => {
         setIsQuizOver(true);
-        navigate('/(trivia)/result');
+        replace('/(trivia)/result');
       }, 1000);
     }
   };
