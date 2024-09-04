@@ -1,4 +1,4 @@
-import {View, ImageBackground, Platform} from 'react-native';
+import {View, ImageBackground, Platform, Dimensions} from 'react-native';
 import React from 'react';
 import {useTheme} from '@shopify/restyle';
 import {Theme} from '@/config';
@@ -11,12 +11,13 @@ type Props = {};
 export const Header = (props: Props) => {
   const {colors} = useTheme<Theme>();
   const {top} = useSafeAreaInsets();
+  const {height, width} = Dimensions.get('screen');
 
   const mt = top + 60 + (Platform.select({ios: 0, android: 30}) ?? 0);
   return (
     <View
       style={{
-        height: 310,
+        height: height * 0.35,
         width: '100%',
       }}>
       <ImageBackground
@@ -24,7 +25,7 @@ export const Header = (props: Props) => {
           height: '100%',
           width: '100%',
         }}
-        resizeMode="contain"
+        resizeMode="cover"
         imageStyle={{
           borderBottomRightRadius: 60,
           backgroundColor: colors.blueSecondary,

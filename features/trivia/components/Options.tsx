@@ -61,7 +61,7 @@ const Option = ({index, option, ans, onSelect, userChoice}: OptionProps) => {
         borderRadius={100}
         borderColor={borderColor}
         borderWidth={thisOption ? 4 : 0}
-        height={thisOption ? 70 : 66}
+        height={thisOption ? 64 : 60}
         flexDirection="row"
         alignItems="center"
         columnGap="s"

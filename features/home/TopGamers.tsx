@@ -36,12 +36,15 @@ const gamers = [
 ];
 export const TopGamers = () => {
   const {spacing} = useTheme<Theme>();
-  const {width} = Dimensions.get('screen');
+  const {width, height} = Dimensions.get('screen');
 
   const w = width - spacing.l * 2;
-
+  const h1 = height * 0.35;
+  const p = h1 * 0.3;
+  const mt = 230 - p;
+  
   return (
-    <Flex width={w} alignSelf="center" borderRadius={spacing.m} justifyContent="center" style={{marginTop: 150}}>
+    <Flex width={w} alignSelf="center" borderRadius={spacing.m} justifyContent="center" style={{marginTop: mt + 20}}>
       <Text fontFamily="bold" fontSize={16}>
         Top Gamers of the Day
       </Text>
