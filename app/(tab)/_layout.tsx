@@ -6,7 +6,9 @@ import {CurveTabBar} from '@/components';
 
 const Layout = () => {
   return (
-    <Tabs tabBar={props => <CurveTabBar {...props} />}>
+    <Tabs
+      screenOptions={{headerTitleStyle: {fontFamily: 'bold', textTransform: 'capitalize'}}}
+      tabBar={props => <CurveTabBar {...props} />}>
       <Tabs.Screen
         name="index"
         options={{headerTransparent: true, tabBarLabel: 'Home', header: () => <TopNavbar />, tabBarIcon: () => <HomeIcon />}}
